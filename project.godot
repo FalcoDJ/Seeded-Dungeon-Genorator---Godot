@@ -1,0 +1,38 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node",
+"class": "BasicRoom",
+"language": "GDScript",
+"path": "res://SRC/Classes/Room.gd"
+} ]
+_global_script_class_icons={
+"BasicRoom": ""
+}
+
+[application]
+
+config/name="Dungeon Genorator"
+run/main_scene="res://SRC/Scenes/Def/Main.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Globals="*res://SRC/Scripts/GLOBALS.gd"
+ProcDunj="*res://SRC/Scripts/ProcDunj.gd"
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
